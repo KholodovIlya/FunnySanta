@@ -16,7 +16,7 @@ function renderCollision(transform) {
 // Mouse input
 class Mouse extends GameObject { constructor() { super(0, 0, 1, 1); this.down = false; } collision(other) {} }
 const mouse = new Mouse();
-document.addEventListener('mousemove', function(e) {
+document.addEventListener('mousemove touchmove', function(e) {
   mouse.transform.position.x = (e.clientX - canvas.offsetLeft) / (canvas.offsetWidth / canvas.width);
   mouse.transform.position.y = (e.clientY - canvas.offsetTop) / (canvas.offsetHeight / canvas.height);
 });
