@@ -98,7 +98,7 @@ class Share extends Button {
     this.transform.size.y -= 5;
     if (navigator.share) {
     navigator.share({
-      text: 'С новым годом!!!: ',
+      text: 'С новым годом!!! ',
       url: 'https://kholodovilya.github.io/FunnySanta/'
     }).then(() => { cash += 10; }).catch((err) => console.error(err));
     } else { alert("The current browser does not support the share function. Please, manually share the link") }
