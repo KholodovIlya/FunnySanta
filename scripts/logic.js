@@ -52,7 +52,7 @@ function render() {
 
 async function mainLoop() {
   const startTime = performance.now();
-  update(); await collisions(); await render();
+  update(); collisions(); await render();
   let sleepTime = fpsInterval - Math.abs(startTime - performance.now()); if (sleepTime < 0) sleepTime = 0;
   setTimeout(mainLoop, sleepTime);
 }
